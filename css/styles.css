@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  scroll-behavior: smooth;
+  
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+footer {
+  height: 300px;
+  background-color: #111;
+  border-top: grey 1px solid;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fefefe;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul li a {
+  cursor: pointer;
+  display: block;
+  color: #fefefe;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+  color: #11101b;
+  background: #fefefe;
+}
+
+.nav-bar ul li a.active {
+  color: #11101b;
+  background: #fefefe;
+}
+
+@media only screen and (max-width: 1320px) {
+  header {
+    padding: 0 50px;
+  }
+}
+@media only screen and (max-width: 1110px) {
+  header {
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: #fefefe;
+    margin: 6px 0;
+  }
+
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #11101b;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  .nav-bar.active {
+    height: 450px;
+  }
+  .nav-bar.active ul {
+    opacity: 1;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+}
+
+.parent {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/cars/2024-tesla-model-s-107-6572200e43fa1.jpg) no-repeat
+      center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  background-size: cover;
+  background-position: top;
+  height: 80vh;
+}
+
+.content p {
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  font-size: 5rem;
+  letter-spacing: 5px;
+}
+
+.parent-2 {
+  background-color: #111;
+  height: 80vh;
+  background-position: top;
+  display: flex;
+  flex-direction: row;
+}
+
+.parent-2 .content-2 .text h1 {
+  position: absolute;
+  top: 80%;
+  margin-top: 70px;
+  left: 40%;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.parent-2 .content-2 .text p {
+  position: absolute;
+  top: 100%;
+  left: 35%;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 600px;
+}
+
+.box-container {
+  position: absolute;
+  top: 117%;
+  display: flex;
+  color: #fff;
+  font-size: 2rem;
+  justify-content: space-evenly;
+  gap: 100px;
+  margin-left: 150px;
+}
+
+.box-container img {
+  transition: all 0.2s;
+}
+
+.box-container img:hover {
+  transform: scale(1.05);
+}
+
+.box-container button {
+  color: #fff;
+  background-color: green;
+  margin-left: 120px;
+  width: 150px;
+  border-radius: 100px;
+  font-size: 1.3rem;
+  transition: all 0.3s;
+  list-style: none;
+  text-decoration: none;
+}
+
+.box-container button a {
+  list-style-type: none;
+  color: white;
+}
+
+.box-container button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.client-reviews {
+  background-color: #111;
+  height: 80vh;
+  background-position: top;
+  display: flex;
+  flex-direction: row;
+  border-top: orange 1px solid;
+}
+
+.reviews-texts:hover > :not(:hover) {
+  opacity: 0.4;
+  transform: scale(0.9);
+}
+
+.reviews-header h1 {
+  position: absolute;
+  margin-top: 70px;
+  left: 39%;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.reviews p {
+  transition: all 0.35s;
+}
+
+.reviews p:hover {
+  transform: scale(1.05);
+}
+
+.credentials {
+  position: absolute;
+  top: 255%;
+  left: 40%;
+}
+
+.credentials h1 {
+  color: white;
+}
+
+.insta-follow {
+  position: absolute;
+  top: 255%;
+  left: 65%;
+}

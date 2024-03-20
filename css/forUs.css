@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  scroll-behavior: smooth;
+  background-color: #000;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+Footer {
+  height: 300px;
+  background-color: #111;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fefefe;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul li a {
+  cursor: pointer;
+  display: block;
+  color: #fefefe;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+  color: #11101b;
+  background: #fefefe;
+}
+
+.nav-bar ul li a.active {
+  color: #11101b;
+  background: #fefefe;
+}
+
+@media only screen and (max-width: 1320px) {
+  header {
+    padding: 0 50px;
+  }
+}
+@media only screen and (max-width: 1110px) {
+  header {
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: #fefefe;
+    margin: 6px 0;
+  }
+
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #11101b;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  .nav-bar.active {
+    height: 450px;
+  }
+  .nav-bar.active ul {
+    opacity: 1;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+  }
+}
+
+.aboutUs {
+  width: 100%;
+  margin-top: 80px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutUs h1 {
+  color: white;
+  font-size: 40px;
+  margin-left: 400px;
+}
+
+.aboutUs p {
+  color: white;
+  font-size: 20px;
+  width: 800px;
+  margin-top: 20px;
+  margin-left: 400px;
+}
+
+.line {
+  margin-top: 20px;
+  margin-left: 400px;
+  height: 2px;
+  background-color: orange;
+  width: 1000px;
+}
+
+.footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
